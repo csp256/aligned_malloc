@@ -9,7 +9,7 @@ aligned_malloc(size_t required_bytes, size_t alignment)
     size_t out = (size_t)raw_ptr + offset;
     void** out_ptr = (void**)(out & -alignment);
     out_ptr[-1] = raw_ptr;
-    return out_ptr;
+    return (void*) out_ptr;
 }
 
 void 
