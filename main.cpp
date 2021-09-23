@@ -19,7 +19,8 @@ aligned_free(void* aligned_ptr)
     free( raw_ptr );
 }
 
-int main()
+int 
+main()
 {
     auto p = aligned_malloc(1000, 256);
     std::cout << p << std::endl;
